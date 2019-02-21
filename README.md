@@ -1,4 +1,4 @@
-# Simulae
+# Simulaê!
 
 Simulaê! é um projeto de plataforma educacional livre e compartilhada. Tem o objetivo de prover a interação de estudantes e professores de todo o Brasil para o compartilhamento do conhecimento.
 
