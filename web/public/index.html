@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -37,6 +39,78 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      // Script for header
+        /* Fade */
+      (function ($) {
+        $(document).ready(function(){
+
+          // hide .navbar first
+          $(".navbar").hide();
+
+          // fade in .navbar
+          $(function () {
+              $(window).scroll(function () {
+
+                      // set distance user needs to scroll before we start fadeIn
+                  if ($(this).scrollTop() > 200) {
+                      $('.navbar').fadeIn();
+                  } else {
+                      $('.navbar').fadeOut();
+                  }
+              });
+          });
+
+        });
+          }(jQuery));
+
+          /* One-Page Scrolling */
+          $(document).ready(function() {
+          // navigation click actions
+          $('.scroll-link').on('click', function(event){
+            event.preventDefault();
+            var sectionID = $(this).attr("data-id");
+            scrollToID('#' + sectionID, 1250);
+          });
+          // scroll to top action
+          $('.scroll-top').on('click', function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop:0}, 'slow');
+          });
+          // mobile nav toggle
+          $('#nav-toggle').on('click', function (event) {
+            event.preventDefault();
+            $('#main-nav').toggleClass("open");
+          });
+        });
+        // scroll function
+        function scrollToID(id, speed){
+          var offSet = 0;
+          var targetOffset = $(id).offset().top - offSet;
+          var mainNav = $('#main-nav');
+          $('html,body').animate({scrollTop:targetOffset}, speed);
+          if (mainNav.hasClass("open")) {
+            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+            mainNav.removeClass("open");
+          }
+        }
+        if (typeof console === "undefined") {
+            console = {
+                log: function() { }
+            };
+        }
+
+        /* Scroll Down */
+        $(function() {
+          $('a[href*=#]').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+          });
+        });
+    </script>
   </body>
-  <script src="particles.js"></script>
+
 </html>

@@ -14,24 +14,36 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
-    background: #ddd;
+  body, html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
+  }
+
+  .Landing-header {
+    background-image: url('../images/Amassado.jpg');
+    background-size: 'cover';
+    width: '100%';
+    height: '100vh';
   }
 
   .Landing-header h1 {
     font-family:'Dancing Script', cursive;
     font-size: 100pt;
     color: #003;
-    justify-content: center;
-    text-align: center;
+    /* justify-content: center; */
+    /* text-align: center; */
     position:absolute;
-		left:50%;
-    top:50%;
-    width: 600px;
-		margin-left:-21.5%;
-    margin-top:-110px;
+		left:36%;
+    top:32%;
+    vertical-align: middle;
+    /* width: 600px; */
+		/* margin-left:-21.5%; */
+    /* margin-top:-110px; */
     text-shadow: 10px 6px 10px gray;
   }
 

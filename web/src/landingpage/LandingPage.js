@@ -1,5 +1,6 @@
 import React from 'react';
 import Particles from 'react-particles-js';
+import Background from '../images/Amassado.jpg';
 
 const LandingPage = () => (
   <div className='Landing-header'>
@@ -9,10 +10,10 @@ const LandingPage = () => (
       params={{
         'particles': {
             'number': {
-                'value': 100
+                'value': 160
             },
             'size': {
-                'value': 5
+                'value': 4
             },
             'color': {
               'value': '#003'
