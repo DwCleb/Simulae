@@ -1,0 +1,15 @@
+{
+  "versionFile": 1.0,
+  "login": "Entrar",
+  "register": "Registro",
+  "email": "Email",
+  "password": "Senha",
+  "forgotPassword": "Esqueci a senha",
+  "or": "Ou",
+  "signUp": "Cadastre-se",
+  "name": "Nome",
+  "confirmPassword": "Confirmação da senha",
+  "policyDisclaimer": "Ao fazer se cadastrar, você aceita os ",
+  "termsOfUse": "Termos de uso",
+  "privacyPolicy": "Politica de Privacidade"
+}

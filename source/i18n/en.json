@@ -1,0 +1,15 @@
+{
+  "versionFile": 1.0,
+  "login": "Login",
+  "register": "Register",
+  "email": "Email",
+  "password": "Password",
+  "forgotPassword": "Forgot password",
+  "or": "Or",
+  "signUp": "Sign Up",
+  "name": "Name",
+  "confirmPassword": "Confirm password",
+  "policyDisclaimer": "By registering, you accept the ",
+  "termsOfUse": "Terms of use",
+  "privacyPolicy": "Privacy Policy"
+}
