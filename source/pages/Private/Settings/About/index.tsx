@@ -12,6 +12,7 @@ export default function About(): JSX.Element {
         <Logo height={200} width={200} />
       </LogoContainer>
       <Text>Cleber Júnior</Text>
+      <Text>Gabriel Ecker</Text>
       <Text>--------------</Text>
       <Text>{t('version')}: 1.0.0</Text>
     </Container>

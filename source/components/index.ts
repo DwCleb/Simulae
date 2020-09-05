@@ -4,7 +4,7 @@ export { default as Button } from './UI/Buttons/Button';
 export { default as SectionButton } from './UI/Buttons/SectionButton';
 export { default as ExpandedHeader } from './UI/ExpandedHeader';
 export { default as Carousel } from './UI/Carousel';
-export { default as CarouselQuestionCard } from './UI/Carousel/CarouselQuestionCardrd';
+export { default as CarouselQuestionCard } from './UI/Carousel/CarouselQuestionCard';
 export { default as Stepper } from './UI/Stepper';
 export { default as ModalScreen } from './UI/Modal';
 export { default as AlertModal } from './UI/AlertModal';

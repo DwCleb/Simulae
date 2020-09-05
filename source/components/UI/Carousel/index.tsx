@@ -59,7 +59,7 @@ export default function CustomCarousel({
       <Carousel
         ref={carouselRef}
         sliderWidth={width}
-        sliderHeight={100}
+        sliderHeight={500}
         itemWidth={width - 40}
         data={data}
         renderItem={({ item, index }): JSX.Element => (

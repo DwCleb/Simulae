@@ -24,7 +24,7 @@ const headerOptions = {
     borderBottomWidth: 0,
     height: Platform.OS === 'ios' ? 60 : 50,
   },
-  headerTitle: (): JSX.Element => <Logo width={180} style={Platform.OS === 'ios' ? { marginTop: -30 } : {}} />,
+  headerTitle: (): JSX.Element => <Logo width={110} style={Platform.OS === 'ios' ? { marginTop: -30 } : {}} />,
   headerLeft: (): JSX.Element => <MenuButton color={Colors.theme.monochromatic.altGrey} />,
 };
 

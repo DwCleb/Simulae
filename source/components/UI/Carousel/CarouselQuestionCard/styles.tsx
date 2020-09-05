@@ -1,26 +1,29 @@
 import styled from 'styled-components/native';
 import { SteppersColors, StepperLength } from '~/components/UI/Stepper/styles';
+import { Metrics } from '~/theme';
 
 export const Container = styled.View`
-  /* flex: 1; */
-  height: 70%;
+  flex: 1;
+  height: ${Metrics.screen.height * 0.6};
   background-color: white;
   shadow-color: #000;
   shadow-offset: 0px -8px;
   shadow-opacity: 0.25;
   shadow-radius: 8px;
   elevation: 6;
-  justify-content: center;
-  align-items: center;
   border-radius: 12px;
   border-top-color: ${({ cardIndex }): string =>
     SteppersColors[cardIndex >= 7 ? cardIndex - StepperLength : cardIndex] || 'red'};
   border-top-width: 10px;
+  padding: 20px;
 `;
 
 export const TitleContainer = styled.View`
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 10px;
+  border-bottom-width: 2px;
+  border-bottom-color: ${({ theme }: ThemeContextType): string => theme.monochromatic.altGrey};
 `;
 
 export const IllustrationContainer = styled.View`
