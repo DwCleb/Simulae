@@ -4,7 +4,7 @@ import { Metrics } from '~/theme';
 
 export const Container = styled.View`
   flex: 1;
-  height: ${Metrics.screen.height * 0.6};
+  min-height: ${Metrics.screen.height * 0.7};
   background-color: white;
   shadow-color: #000;
   shadow-offset: 0px -8px;
@@ -12,10 +12,10 @@ export const Container = styled.View`
   shadow-radius: 8px;
   elevation: 6;
   border-radius: 12px;
-  border-top-color: ${({ cardIndex }): string =>
-    SteppersColors[cardIndex >= 7 ? cardIndex - StepperLength : cardIndex] || 'red'};
+  border-top-color: ${({ theme }): string => theme.primary.blue};
   border-top-width: 10px;
   padding: 20px;
+  margin-bottom: 20px;
 `;
 
 export const TitleContainer = styled.View`
@@ -31,19 +31,24 @@ export const IllustrationContainer = styled.View`
   align-items: center;
 `;
 
-export const DescriptionContainer = styled.View`
+export const AlternativeContainer = styled.TouchableOpacity`
   justify-content: center;
-  align-items: center;
+  padding: 10px;
+  min-height: 70px;
+  border-width: 1px;
+  border-radius: 12px;
+  border-color: black;
+  margin-top: 10px;
 `;
 
 export const CarouselImage = styled.Image.attrs(() => ({
   resizeMode: 'cover',
 }))`
-  border-radius: 80px;
-  /* margin: ${20}px 0px; */
+  /* border-radius: 80px; */
+  margin: ${20}px 0px;
   align-self: center;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 300px;
   /* width: ${({ width }): number | string => (typeof width === 'number' ? `${width}px` : width)};
   height: ${({
     height,

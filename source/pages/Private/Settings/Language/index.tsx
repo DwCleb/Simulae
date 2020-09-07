@@ -10,6 +10,7 @@ export default function Language({ onSelect, selected }): JSX.Element {
   const languages = [
     { id: 'pt', name: t('portuguese') },
     { id: 'en', name: t('english') },
+    { id: 'es', name: t('spanish') },
   ];
 
   return (

@@ -16,12 +16,9 @@ export const AsyncBackend: BackendModule = {
     asyncStoreTranslations = asyncStoreTranslationsRequest && JSON.parse(asyncStoreTranslationsRequest);
     //FIXME: Might need a timeout or a loading, request can be "alive" for quite some time before it throws an error
     try {
-      const translationRequest = await fetch(
-        `${config.i18n.url}/${language}.json?${config.i18n[`token${language.toUpperCase()}`]}`,
-        {
-          method: 'get',
-        }
-      );
+      const translationRequest = await fetch(`${config.i18n.url}/${language}.json`, {
+        method: 'get',
+      });
 
       console.log(translationRequest);
       if (translationRequest.ok) {

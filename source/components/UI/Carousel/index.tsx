@@ -56,6 +56,7 @@ export default function CustomCarousel({
 
   return (
     <Fragment>
+      {Pagination && <Pagination length={data.length} activeDotIndex={sliderActiveSlide} />}
       <Carousel
         ref={carouselRef}
         sliderWidth={width}

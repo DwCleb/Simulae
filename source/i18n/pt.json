@@ -11,5 +11,20 @@
   "confirmPassword": "Confirmação da senha",
   "policyDisclaimer": "Ao fazer se cadastrar, você aceita os ",
   "termsOfUse": "Termos de uso",
-  "privacyPolicy": "Politica de Privacidade"
+  "privacyPolicy": "Política de Privacidade",
+  "spanish": "Espanhol",
+  "portuguese": "Português",
+  "english": "Inglês",
+  "home": "Início",
+  "profile": "Perfil",
+  "settings": "Configurações",
+  "logout": "Sair",
+  "about": "Sobre",
+  "language": "Idioma",
+  "alreadyHaveAccount": "Já tenho conta",
+  "version": "Versão",
+  "changePassword": "Alterar senha",
+  "currentPassword": "Atual senha",
+  "newPassword": "Nova senha",
+  "save": "Salvar"
 }

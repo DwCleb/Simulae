@@ -7,8 +7,8 @@ import AsyncStorage from '@react-native-community/async-storage';
 import { KEY } from '~/services/storage';
 import { AsyncBackend } from './backend';
 
-const availableLanguage = Localize.findBestAvailableLanguage(['en', 'pt']);
-const languageTag = availableLanguage ? availableLanguage.languageTag : 'en';
+const availableLanguage = Localize.findBestAvailableLanguage(['en', 'pt', 'es']);
+const languageTag = availableLanguage ? availableLanguage.languageTag : 'pt';
 
 const languageDetector: LanguageDetectorAsyncModule = {
   // eslint-disable-next-line
@@ -35,7 +35,7 @@ i18n
     fallbackLng: languageTag,
     preload: [true, true],
     nonExplicitSupportedLngs: true,
-    whitelist: ['en', 'pt'],
+    whitelist: ['en', 'pt', 'es'],
     react: {
       useSuspense: false,
       wait: true,

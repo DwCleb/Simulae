@@ -11,5 +11,20 @@
   "confirmPassword": "Confirm password",
   "policyDisclaimer": "By registering, you accept the ",
   "termsOfUse": "Terms of use",
-  "privacyPolicy": "Privacy Policy"
+  "privacyPolicy": "Privacy Policy",
+  "spanish": "Spanish",
+  "portuguese": "Portuguese",
+  "english": "English",
+  "home": "Home",
+  "profile": "Profile",
+  "settings": "Settings",
+  "logout": "Logout",
+  "about": "About",
+  "language": "Language",
+  "alreadyHaveAccount": "Already have account",
+  "version": "Version",
+  "changePassword": "Change password",
+  "currentPassword": "Current password",
+  "newPassword": "New password",
+  "save": "Save"
 }
