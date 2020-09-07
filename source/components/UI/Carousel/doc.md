@@ -18,15 +18,10 @@ A carousel component to render diferent items in template.
   ...
   const DATA = [
     {
-      title: 'Welcome to Jawwy',
+      title: '',
       image: Logo,
-      description: 'Join us! Personalise, track and manage your prepaid plan in real time.',
+      description: '',
     },
-    {
-      title: 'Your plan, your way',
-      image: Step2,
-      description: 'We give you Unlimited Voice and SMS.\nJust select the data, add-ons and validity.',
-    }
   ];
 
   return <Carousel data={DATA} />

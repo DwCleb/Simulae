@@ -12,7 +12,7 @@
     "ios": "react-native run-ios --simulator=\"iPhone 11 Pro\"",
     "ios:pod": "cd ios && pod install && cd ..",
     "ios:pod:i": "cd ios && pod install && cd .. && react-native run-ios",
-    "ios:build": "cd ios && xcodebuild -workspace App.xcworkspace -scheme App -configuration AppStoreDistribuition archive -archivePath ./Jawwy.xcarchive && xcodebuild -exportArchive -archivePath ./Jawwy.xcarchive -exportPath ./Jawwy.ipa -exportOptionsPlist ./exportOptions.plist",
+    "ios:build": "cd ios && xcodebuild -workspace App.xcworkspace -scheme App -configuration AppStoreDistribuition archive -archivePath ./Simulae.xcarchive && xcodebuild -exportArchive -archivePath ./Simulae.xcarchive -exportPath ./Simulae.ipa -exportOptionsPlist ./exportOptions.plist",
     "timeline": "git log --all --graph --decorate --oneline",
     "test": "jest",
     "coverage": "jest --coverage --watchAll=false",

@@ -16,5 +16,5 @@ A template item to render inside of Carousel component.
 
 ```js
   ...
-  return <CarouselItem title="Welcome to Jawwy" image={Logo} description="Join us!..." />
+  return <CarouselItem title="Question 1" image={Logo} description="What is your name?" />
 ```

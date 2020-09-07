@@ -237,7 +237,6 @@ export const TitleButton = styled.Text.attrs((props: Props) => ({
 }))`
   color: ${(props: Props): string => getIitleColor(props)};
   font-size: 14px;
-  /* font-family: Jawwy-Bold; */
   line-height: 26px;
   text-transform: uppercase;
   letter-spacing: 1.4px;
