@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 
+import { useTranslation } from 'react-i18next';
 import { Button, Input } from '~/components';
 
 import { ButtonsContainer, TitleContainer, Title, InputsContainer } from './styles';
 
 export default function Register({ onLogin, handleInputRegisterFormChange, form }): JSX.Element {
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   // useEffect(() => {
   //   if (Platform.OS === 'android') SplashScreen.hide();
@@ -14,17 +16,17 @@ export default function Register({ onLogin, handleInputRegisterFormChange, form 
   return (
     <ButtonsContainer>
       <TitleContainer>
-        <Title>Cadastro</Title>
+        <Title>{t('register')}</Title>
       </TitleContainer>
       <InputsContainer>
-        <Input dark name="name" value={form.values.name} onChange={handleInputRegisterFormChange} label="Nome" />
+        <Input dark name="name" value={form.values.name} onChange={handleInputRegisterFormChange} label={t('name')} />
         <Input
           dark
           name="email"
           value={form.values.email}
           onChange={handleInputRegisterFormChange}
           keyboardType="email-address"
-          label="E-mail"
+          label={t('email')}
         />
         <Input
           dark
@@ -32,7 +34,7 @@ export default function Register({ onLogin, handleInputRegisterFormChange, form 
           value={form.values.password}
           onChange={handleInputRegisterFormChange}
           secureTextEntry
-          label="Senha"
+          label={t('password')}
         />
         <Input
           dark
@@ -40,11 +42,11 @@ export default function Register({ onLogin, handleInputRegisterFormChange, form 
           value={form.values.confirmPassword}
           onChange={handleInputRegisterFormChange}
           secureTextEntry
-          label="Confirmar senha"
+          label={t('confirmPassword')}
         />
       </InputsContainer>
-      <Button isLoading={loading} title="Cadastrar" variant="primary" onPress={form.handleSubmit} />
-      <Button isLoading={loading} title="Já tenho conta" variant="secondaryOutlined" onPress={onLogin} />
+      <Button isLoading={loading} title={t('signUp')} variant="primary" onPress={form.handleSubmit} />
+      <Button isLoading={loading} title={t('alreadyHaveAccount')} variant="secondaryOutlined" onPress={onLogin} />
     </ButtonsContainer>
   );
 }

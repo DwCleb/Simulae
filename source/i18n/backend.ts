@@ -20,7 +20,6 @@ export const AsyncBackend: BackendModule = {
         method: 'get',
       });
 
-      console.log(translationRequest);
       if (translationRequest.ok) {
         const translations = await translationRequest.json();
         if (!asyncStoreTranslations || asyncStoreTranslations !== translations) {

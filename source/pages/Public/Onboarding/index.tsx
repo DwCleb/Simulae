@@ -45,7 +45,6 @@ export default function Onboarding(): JSX.Element {
   });
 
   const handleInputLoginFormChange = ({ value, name }): void => {
-    console.log(name, value);
     formikLogin.setFieldValue(name, value);
   };
 

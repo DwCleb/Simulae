@@ -7,15 +7,7 @@ import IonIcon from 'react-native-vector-icons/Ionicons';
 import { Colors } from '~/theme';
 import { UserContext } from '~/services/store/reducers';
 
-import {
-  Container,
-  HeaderContainer,
-  UserAvatar,
-  UserName,
-  HouseName,
-  UserNameFirstLetter,
-  UserNameAvatar,
-} from './styles';
+import { Container, HeaderContainer, UserAvatar, UserName, UserNameFirstLetter, UserNameAvatar } from './styles';
 
 export default function DrawerContent(props): JSX.Element {
   const { t } = useTranslation();
@@ -46,7 +38,6 @@ export default function DrawerContent(props): JSX.Element {
           </UserNameAvatar>
         )}
         <UserName>{user.name}</UserName>
-        {user.houseName && <HouseName>{user.houseName}</HouseName>}
       </HeaderContainer>
       <DrawerItemList
         {...props}

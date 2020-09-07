@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 
+import { useTranslation } from 'react-i18next';
 import { Button, Input } from '~/components';
 
 import { ButtonsContainer, TitleContainer, Title, InputsContainer } from './styles';
 
 export default function Login({ onRegister, handleInputLoginFormChange, form, onSubmit }): JSX.Element {
   const [loading, setLoading] = useState(false);
-
+  const { t } = useTranslation();
   return (
     <ButtonsContainer>
       <TitleContainer>
-        <Title>Entrar</Title>
+        <Title>{t('login')}</Title>
       </TitleContainer>
       <InputsContainer>
         <Input
@@ -19,7 +20,7 @@ export default function Login({ onRegister, handleInputLoginFormChange, form, on
           value={form.values.email}
           onChange={handleInputLoginFormChange}
           keyboardType="email-address"
-          label="E-mail"
+          label={t('email')}
         />
         <Input
           dark
@@ -27,11 +28,11 @@ export default function Login({ onRegister, handleInputLoginFormChange, form, on
           value={form.values.password}
           onChange={handleInputLoginFormChange}
           secureTextEntry
-          label="Senha"
+          label={t('password')}
         />
       </InputsContainer>
-      <Button isLoading={loading} title="Entrar" variant="primary" onPress={onSubmit} />
-      <Button isLoading={loading} title="Cadastre-se" variant="secondaryOutlined" onPress={onRegister} />
+      <Button isLoading={loading} title={t('login')} variant="primary" onPress={onSubmit} />
+      <Button isLoading={loading} title={t('register')} variant="secondaryOutlined" onPress={onRegister} />
     </ButtonsContainer>
   );
 }
