@@ -108,7 +108,7 @@ export default function Profile(): JSX.Element {
   return (
     <Container>
       <ExpandedHeader title={t('profile')} />
-      {renderFileData()}
+      {/* {renderFileData()} */}
       <InputsContainer>
         <Input dark name="name" value={formik.values.name} onChange={handleInputFormChange} label={t('name')} />
         <Input

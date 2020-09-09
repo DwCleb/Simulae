@@ -1,5 +1,4 @@
 import React from 'react';
-import { Platform } from 'react-native';
 
 import { Typography } from '~/components';
 import { TypographyType } from '~/components/UI/Typography';
@@ -10,6 +9,7 @@ export interface CarouselItemProps {
   item: { question: string; checkIn: string; image: JSX.Element; overlap: boolean; cardIndex: number };
 }
 
+const alternativesIndex = ['A)', 'B)', 'C)', 'D)', 'E)'];
 export default function CarouselQuestionCard({ item, cardIndex }: CarouselItemProps): JSX.Element {
   const { question, alternatives, image } = item;
 
@@ -27,10 +27,10 @@ export default function CarouselQuestionCard({ item, cardIndex }: CarouselItemPr
         </IllustrationContainer>
       )}
 
-      {alternatives?.map((alternative) => (
+      {alternatives?.map((alternative, index) => (
         <AlternativeContainer>
           <Typography key={alternative.id} type={TypographyType.P1} distance={[0, 0, 0, 0]} align="justify">
-            {alternative.text}
+            {`${alternativesIndex[index]} ${alternative.text}`}
           </Typography>
         </AlternativeContainer>
       ))}

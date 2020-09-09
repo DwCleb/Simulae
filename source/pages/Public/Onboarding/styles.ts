@@ -14,14 +14,17 @@ export const Container = styled.View`
 
 export const LogoContainer = styled.View`
   width: 100%;
-  flex: 1;
+  flex: 10;
   align-items: center;
   justify-content: center;
 `;
 
-export const ButtonsContainer = styled.View`
-  width: 100%;
-  flex: 1;
+export const ButtonsContainer = styled.ScrollView.attrs(() => ({
+  contentContainerStyle: {
+    flexGrow: 1,
+    width: '100%',
+  },
+}))`
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }: ThemeContextType): string => theme.monochromatic.almostWhite};

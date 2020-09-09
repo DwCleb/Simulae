@@ -3,32 +3,23 @@ import AnimatedInput from 'react-native-animated-input';
 
 import { Typography } from '~/components';
 import { TypographyType } from '~/components/UI/Typography';
-import { ThemeContextType } from '~/theme';
+import { ThemeContextType, Metrics } from '~/theme';
 
-export const Container = styled.View`
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  background-color: ${({ theme }: ThemeContextType): string => theme.primary.purple};
-`;
-
-export const LogoContainer = styled.View`
-  width: 100%;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const ButtonsContainer = styled.View`
-  width: 100%;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
+export const ButtonsContainer = styled.ScrollView.attrs(() => ({
+  contentContainerStyle: {
+    // flex: 0.5,
+    flexGrow: 0.01,
+    width: Metrics.screen.width,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
+}))`
   background-color: ${({ theme }: ThemeContextType): string => theme.monochromatic.almostWhite};
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 `;
+
 
 export const TitleContainer = styled.View`
   align-items: flex-start;
