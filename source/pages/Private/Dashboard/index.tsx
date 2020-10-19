@@ -1,9 +1,11 @@
 import React from 'react';
 // import SplashScreen from 'react-native-splash-screen';
 
-import { Carousel, CarouselQuestionCard, Stepper } from '~/components';
+import { Carousel, CarouselQuestionCard, Stepper, HorizontalList, CardList } from '~/components';
 import { Container, CarouselContainer } from './styles';
 import { DefaultTestImage } from '~/assets';
+
+import { Text, FlatList } from 'react-native';
 
 const MOCK_DATA = [
   {
@@ -50,11 +52,30 @@ const MOCK_DATA = [
   },
 ];
 
+const MOCK_DATA_SUBJECT = [
+  {
+    title: 'matematica',
+  },
+  { title: 'portugues' },
+  {
+    title: 'matematica',
+  },
+  { title: 'portugues' },
+  {
+    title: 'matematica',
+  },
+  { title: 'portugues' },
+  {
+    title: 'matematica',
+  },
+  { title: 'portugues' },
+];
 export default function Dashboard(): JSX.Element {
   return (
     <Container>
       <CarouselContainer>
-        <Carousel CarouselItem={CarouselQuestionCard} Pagination={Stepper} data={MOCK_DATA} />
+        <HorizontalList ListItem={CardList} headerTitle="Disciplinas" data={MOCK_DATA_SUBJECT} />
+        {/* <Carousel CarouselItem={CarouselQuestionCard} Pagination={Stepper} data={MOCK_DATA} /> */}
       </CarouselContainer>
     </Container>
   );

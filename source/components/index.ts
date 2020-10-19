@@ -9,4 +9,6 @@ export { default as Stepper } from './UI/Stepper';
 export { default as ModalScreen } from './UI/Modal';
 export { default as AlertModal } from './UI/AlertModal';
 export { default as Input } from './UI/Input';
+export { default as HorizontalList } from './UI/HorizontalList';
+export { default as CardList } from './UI/HorizontalList/CardList';
 export { BackButton, DrawerContent, MenuButton } from './Navigation';
