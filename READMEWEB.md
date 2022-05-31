@@ -11,4 +11,4 @@ O Website tem a divisão:
 
 ## Station
 
-É a plataforma do sistema Simulaê! que conterá todas as funconalidades da plataforma.
+É a plataforma do sistema Simulaê! que conterá todas as funcionalidades da plataforma.
